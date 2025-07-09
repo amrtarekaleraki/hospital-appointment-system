@@ -1,0 +1,38 @@
+      <div
+        id="sidebarId"
+        class="position-relative d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar"
+      >
+        <span style="right: 10px; top: 2px" class="position-absolute">
+          <button class="btn" onclick="toggleSidebar()">
+            <i  class="bi bi-x-circle"></i>
+          </button>
+        </span>
+
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+        >
+          <i class="bi bi-lightning-charge"></i>
+          <span class="fs-4 sidebar-text">Hospital</span>
+        </a>
+        <hr />
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a href="/" class="nav-link text-white <%= currentpage === "index" ? "active" : null %> " aria-current="page">
+              <svg class="bi pe-none me-2" width="16" height="16">
+                <use xlink:href="#home" />
+              </svg>
+              <span class="sidebar-text"> Doctors </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="/appointments" class="nav-link text-white <%= currentpage === "appointments" ? "active" : null %> " aria-current="page">
+              <svg class="bi pe-none me-2" width="16" height="16">
+                <use xlink:href="#people-circle" />
+              </svg>
+              <span class="sidebar-text"> Appointments </span>
+            </a>
+          </li>
+        </ul>
+      </div>
